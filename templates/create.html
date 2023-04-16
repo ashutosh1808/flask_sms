@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title> Home page </title>
+	<style>
+		*{	font-size:110%; font-family:Calibri; }
+		body{ background-color:#99ffcc; }
+	</style>
+</head>
+<body>
+	<center>
+		<h1>Create Page</h1>
+		<a href={{url_for('home')}}>Home</a>
+		<br/>
+		<form action="/create">
+		<input type="number" name="rn" style="width:300px;" placeholder="enter rno" min="1" required/>
+		<br/><br/>
+		<input type="text" placeholder="enter name" style="width:300px;" name="na" min_length="2" required/>
+		<br/><br/>
+		<input type="number" placeholder="enter marks" name="marks" min="0" max="100" style="width:300px;" required/>
+		<br/><br/>
+		<input type="submit"/>
+		</form>
+		{{msg}}
+	</center>
+</body>
+</html>
